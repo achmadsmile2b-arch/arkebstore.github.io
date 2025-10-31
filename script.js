@@ -1,11 +1,11 @@
 const products = [
-  { brand: "Samsung", model: "Galaxy S24", price: 12000000, img: "https://i.imgur.com/qYZzv7F.jpg" },
-  { brand: "iPhone", model: "iPhone 15 Pro", price: 22000000, img: "https://i.imgur.com/Fk7lYyO.jpg" },
-  { brand: "Xiaomi", model: "Redmi Note 13 Pro", price: 5500000, img: "https://i.imgur.com/nR1yqZL.jpg" },
-  { brand: "Oppo", model: "Reno 12", price: 6800000, img: "https://i.imgur.com/FSS7pZx.jpg" },
-  { brand: "Vivo", model: "V30", price: 6700000, img: "https://i.imgur.com/ZG7vYCU.jpg" },
-  { brand: "Infinix", model: "Zero 30", price: 4200000, img: "https://i.imgur.com/Nh1xltx.jpg" },
-  { brand: "Realme", model: "Realme 12 Pro", price: 6100000, img: "https://i.imgur.com/AMIGtZx.jpg" },
+  { brand: "Samsung", model: "Galaxy S24", price: 12000000, img: "https://images.samsung.com/is/image/samsung/p6pim/id/sm-s921bzkdxid/gallery/id-galaxy-s24-sm-s921-483418-sm-s921bzkdxid-537275222?$650_519_PNG$" },
+  { brand: "iPhone", model: "iPhone 15 Pro", price: 22000000, img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium" },
+  { brand: "Xiaomi", model: "Redmi Note 13 Pro", price: 5500000, img: "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-13-pro-5g-1.jpg" },
+  { brand: "Oppo", model: "Reno 12", price: 6800000, img: "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-reno12-1.jpg" },
+  { brand: "Vivo", model: "V30", price: 6700000, img: "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-v30-1.jpg" },
+  { brand: "Infinix", model: "Zero 30", price: 4200000, img: "https://fdn2.gsmarena.com/vv/pics/infinix/infinix-zero-30-1.jpg" },
+  { brand: "Realme", model: "Realme 12 Pro", price: 6100000, img: "https://fdn2.gsmarena.com/vv/pics/realme/realme-12-pro-plus-1.jpg" },
 ];
 
 const container = document.getElementById("products");
