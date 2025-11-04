@@ -23,7 +23,7 @@ function renderProducts(list) {
     `;
   });
 
-  // === Tambahkan event listener ke tombol ===
+  // === Event listener tombol beli ===
   document.querySelectorAll(".buy-btn").forEach(btn => {
     btn.addEventListener("click", async (e) => {
       const model = e.target.dataset.model;
@@ -46,4 +46,27 @@ function renderProducts(list) {
         });
 
         if (response.redirected) {
-          window.location
+          window.location.href = response.url; // redirect ke halaman pembayaran iPaymu
+        } else {
+          alert("Gagal membuat link pembayaran iPaymu.");
+        }
+      } catch (err) {
+        alert("Terjadi kesalahan koneksi ke server iPaymu.");
+        console.error(err);
+      }
+    });
+  });
+}
+
+// === Fitur pencarian produk ===
+document.getElementById("search").addEventListener("input", e => {
+  const val = e.target.value.toLowerCase();
+  const filtered = products.filter(p =>
+    p.brand.toLowerCase().includes(val) ||
+    p.model.toLowerCase().includes(val)
+  );
+  renderProducts(filtered);
+});
+
+// === Render awal ===
+renderProducts(products);
