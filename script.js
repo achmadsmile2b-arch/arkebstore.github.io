@@ -105,5 +105,24 @@ function openPopup(model) {
 cancelBtn.addEventListener("click", () => (popup.style.display = "none"));
 confirmBtn.addEventListener("click", () => {
   popup.style.display = "none";
-  window.location.href = `https://ipaymu-shopify.onrender.com/pay?product=${selectedProduct}`;
+
+  // Ambil data produk yang dipilih
+  const product = products.find(p => `${p.brand} ${p.model}` === selectedProduct);
+
+  if (!product) {
+    alert("Produk tidak ditemukan!");
+    return;
+  }
+
+  // Buat order_id acak
+  const orderId = "ORD" + Date.now();
+
+  // Arahkan ke server iPaymu dengan data lengkap
+  const params = new URLSearchParams({
+    order_id: orderId,
+    product: product.model,
+    amount: product.price
+  });
+
+  window.location.href = `https://ipaymu-shopify.onrender.com/pay?${params.toString()}`;
 });
