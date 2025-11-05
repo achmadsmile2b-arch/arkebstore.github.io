@@ -3,24 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arkeb Store - Toko HP Baru</title>
+  <title>Arkeb Store | HP Original & Bergaransi</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Arkeb Store</h1>
-    <p>Toko HP Baru | Original | Bergaransi Resmi</p>
+    <div class="navbar">
+      <h1 class="logo">Arkeb <span>Store</span></h1>
+      <nav>
+        <a href="#produk">Produk</a>
+        <a href="https://wa.me/628136051945" target="_blank">Hubungi Kami</a>
+      </nav>
+    </div>
+    <p class="tagline">Toko HP Baru • Original • Bergaransi Resmi</p>
   </header>
 
-  <nav>
-    <input type="text" id="search" placeholder="Cari merek atau model..." />
-  </nav>
+  <main>
+    <section class="search-section">
+      <input type="text" id="search" placeholder="Cari merek atau model HP..." />
+    </section>
 
-  <section id="products"></section>
+    <section id="products" class="products"></section>
+  </main>
 
   <footer>
-    <p>© 2025 Arkeb Store | <a href="https://wa.me/6281234567890">Hubungi via WhatsApp</a></p>
+    <p>© 2025 Arkeb Store. Semua hak dilindungi. | 
+      <a href="https://wa.me/6285174293633">Hubungi via WhatsApp</a>
+    </p>
   </footer>
+
+  <!-- Pop-up Konfirmasi -->
+  <div id="popup" class="popup-overlay">
+    <div class="popup-box">
+      <h3 id="popup-title">Konfirmasi Pembelian</h3>
+      <p id="popup-message"></p>
+      <div class="popup-actions">
+        <button id="cancel-btn" class="btn-cancel">Batal</button>
+        <button id="confirm-btn" class="btn-confirm">Lanjut ke Pembayaran</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
